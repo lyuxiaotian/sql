@@ -207,3 +207,6 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 ```
 Your thoughts...
 ```
+It’s sad that after being educated for many years, we’ve come to understand that people can’t be simply divided into “good” and “bad,” yet on the internet, our choices are often reduced to binary options like “Yes/No,” “True/False,” or “If/Else.” Our nuanced, unspeakable reasons get cut off when faced with such rigid conditions.
+I once heard that people with the last name Null have experienced countless system breakdowns, to the point that some had to change their names — a striking example of how human identity can be distorted by data logic.
+Regarding the article, I don’t want to judge its specific case, but it feels cold that we’re constantly trying to force every human situation into a perfect logical match, even when the settings are absurd. Such database-driven criteria could also become a terrifying tool of control — one that can be used to unlawfully restrict human rights.
