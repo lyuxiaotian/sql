@@ -54,7 +54,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+There are two possible architectures for storing customer addresses, depending on whether the bookstore wants to preserve historical changes or simply keep the most recent address. In a “Type 1 slowly changing dimension” the `CUSTOMER_ADDRESS` table overwrites the existing address whenever a customer moves. Only a single record per customer is kept, and no historical information is retained. This design is simple and storage-efficient, but it does not allow the store to track where a customer previously lived.
+
+In contrast, a “Type 2 slowly changing dimension” preserves the full history of address changes. Each time a customer updates their address, a new row is inserted into the `CUSTOMER_ADDRESS` table, typically including fields such as `effective_start_date`, `effective_end_date`, and an `is_current` flag. Older addresses remain in the table with an end date, while the newest address has an open-ended end date (or a current flag). This approach increases storage and complexity but allows the bookstore to maintain a complete historical record of customer locations for analytics, auditing, or operational use.
 ```
 
 ***
@@ -183,5 +185,7 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+The examples in the paper remind me of something I often notice in real life. Computer models today require extremely explicit instructions—if the prompt is vague, they sometimes “use their imagination” and generate funny or unexpected results. But despite these occasional failures, the technology is becoming increasingly mature. For instance, in fields like historical document restoration, machine-learning systems can’t directly interpret damaged or old physical papers without being trained on millions of similar examples. To improve their accuracy, these systems depend on human input. Many of the CAPTCHA tests we solve every day—identifying traffic lights, crosswalks, or distorted letters—are essentially small pieces of labor that quietly help machines learn to see like humans.
+
+This makes me reflect on what the paper discusses: although we contribute to model training so seamlessly, we often do so without understanding what values or biases we are reinforcing. The automation feels neutral, but the underlying process is shaped by human judgment. I also worry, as the author does, that these systems may unintentionally introduce prejudice or discrimination, especially when the bias is subtle or goes unnoticed. There is no absolute, perfectly balanced form of “fairness” in these models; they inevitably reflect the worldviews of the people who teach them. And because we rely on them more and more, these hidden biases can quietly become part of our daily digital environment.
 ```
